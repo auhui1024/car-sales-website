@@ -27,3 +27,8 @@ nav a {
 img {
     height: 50px;
 }
+
+body{
+    background-image: url("../assets/icons/381773743011_.pic.jpg");
+    background-size: cover;
+}
