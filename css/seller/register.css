@@ -1,0 +1,76 @@
+/* basic */* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    max-width: 420px;
+    margin: 55px auto;
+    padding: 0 20px;
+
+    background-image: url("../../assets/icons/f1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
+    opacity: 1;
+}/*background and layout*/
+
+h2{
+    text-align: center;
+    font-size: 24px;
+    color:#fff;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+/*form styles*/
+.form-item {
+    margin-bottom: 20px;
+}
+.form-item lable{
+    display:block;
+    font-size: 14px;
+    color:#555;
+    margin-bottom: 8px;
+}
+.form-item input{
+    width: 100%;
+   height:44px;
+   padding: 0 15px;
+   border: 1px solid #ddd;
+   border-radius:5px ;
+   font-size: 14px;
+   outline:none;
+   transition: border 0.2s;
+}
+
+.form-item input:focus{
+    border-color:#409eff;
+}
+/*button*/
+button[type="submit"]{
+    width: 100%;
+    height:46px;
+    background-color:#409eff;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+button[type="submit"]:hover{
+    background-color:#338eef;
+}
+/*Prompt message*/
+#msg{
+    text-align: center;
+    font-size: 14px;
+    color:#f56c6c;
+    margin-top: 15px;
+    min-height: 20px;
+}
+
