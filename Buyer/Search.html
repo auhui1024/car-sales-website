@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Search</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <a href="/">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <nav>
+            <a href="/">Car Info</a>
+            <a href="/">About Us</a>
+            <a href="search.html">Search</a>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <h2>Car Search</h2>
+        <form class="search-form">
+            <input type="text" class="search-input" placeholder="Search brand or model">
+            <div class="search-filters">
+                <select class="filter-select">
+                    <option value="">All Brands</option>
+                    <option>Toyota</option>
+                    <option>BMW</option>
+                    <option>Honda</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">All Prices</option>
+                    <option>Under 100k</option>
+                    <option>100k-300k</option>
+                </select>
+            </div>
+            <button class="search-btn">Search</button>
+        </form>
+    </div>
+
+    <div class="car-list">
+        <h3>Results</h3>
+        <div class="car-item">
+            <img src="car.jpg" alt="Car">
+            <div class="car-info">
+                <h4>Toyota Corolla 2025</h4>
+                <p>Price: $128,800</p>
+                <p>Type: Sedan</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
