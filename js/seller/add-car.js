@@ -1,12 +1,12 @@
 function addCar() {
-    const model = document.getElementById('carModel').value.trim();
-    const price = document.getElementById('carPrice').value.trim();
-    const mileage = document.getElementById('carMileage').value.trim();
-    const year = document.getElementById('carYear').value.trim();
-    const color = document.getElementById('carColor').value.trim();
-    const desc = document.getElementById('carDesc').value.trim();
-    const image = document.getElementById('carImage').value.trim();
-    const msg = document.getElementById('addCarMsg');
+    const model = document.getElementById('model').value.trim();
+    const price = document.getElementById('price').value.trim();
+    const mileage = document.getElementById('mileage').value.trim();
+    const year = document.getElementById('year').value.trim();
+    const color = document.getElementById('color').value.trim();
+    const desc = document.getElementById('describe').value.trim();
+    const image = document.getElementById('carimage').value.trim();
+    const msg = document.getElementById('ad');
 
     msg.textContent = '';
     msg.style.color = '';
@@ -45,13 +45,13 @@ function addCar() {
     localStorage.setItem('carList', JSON.stringify(cars));
 
     // 2) 清空表单
-    document.getElementById('carModel').value = '';
-    document.getElementById('carPrice').value = '';
-    document.getElementById('carMileage').value = '';
-    document.getElementById('carYear').value = '';
-    document.getElementById('carColor').value = '';
-    document.getElementById('carDesc').value = '';
-    document.getElementById('carImage').value = '';
+    document.getElementById('model').value = '';
+    document.getElementById('price').value = '';
+    document.getElementById('mileage').value = '';
+    document.getElementById('year').value = '';
+    document.getElementById('color').value = '';
+    document.getElementById('describe').value = '';
+    document.getElementById('carimage').value = '';
 
     return false;
 }

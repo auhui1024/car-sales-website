@@ -8,35 +8,35 @@
 <body>
     <div class="container">
         <h2>新增车辆</h2>
-        <p id="addCarMsg"></p>
+        <p id="ad"></p>
         <form onsubmit="return addCar()" novalidate>
             <div class="form-item">
-                <label for="carModel">车型</label>
-                <input id="carModel" type="text" placeholder="请输入车型（例如：丰田卡罗拉）" required>
+                <label for="model">车型</label>
+                <input id="model" type="text" placeholder="请输入车型" required>
             </div>
             <div class="form-item">
-                <label for="carPrice">价格（元）</label>
-                <input id="carPrice" type="number" min="1" step="0.01" placeholder="请输入价格" required>
+                <label for="price">价格（元）</label>
+                <input id="price" type="number" min="1" step="0.01" placeholder="请输入价格" required>
             </div>
             <div class="form-item">
-                <label for="carMileage">里程（公里）</label>
-                <input id="carMileage" type="number" min="0" step="1" placeholder="请输入行驶里程" required>
+                <label for="mileage">里程（公里）</label>
+                <input id="mileage" type="number" min="0" step="1" placeholder="请输入行驶里程" required>
             </div>
             <div class="form-item">
-                <label for="carYear">车龄（年）</label>
-                <input id="carYear" type="number" min="0" step="1" placeholder="请输入车龄" required>
+                <label for="year">车龄（年）</label>
+                <input id="year" type="number" min="0" step="1" placeholder="请输入车龄" required>
             </div>
             <div class="form-item">
-                <label for="carColor">颜色</label>
-                <input id="carColor" type="text" placeholder="请输入车辆颜色" required>
+                <label for="color">颜色</label>
+                <input id="color" type="text" placeholder="请输入车辆颜色" required>
             </div>
             <div class="form-item">
-                <label for="carDesc">车辆描述</label>
-                <textarea id="carDesc" rows="4" placeholder="可填写车辆优点、配置、事故情况等"></textarea>
+                <label for="describe">车辆描述</label>
+                <textarea id="describe" rows="4" placeholder="可填写车辆优点、配置、事故情况等"></textarea>
             </div>
             <div class="form-item">
-                <label for="carImage">图片 URL（可选）</label>
-                <input id="carImage" type="url" placeholder="https://...">
+                <label for="carimage">图片 URL（可选）</label>
+                <input id="carimage" type="url" placeholder="https://...">
             </div>
             <button type="submit">添加车辆</button>
         </form>
