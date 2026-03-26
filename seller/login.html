@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卖家登录</title>
+    <link rel="stylesheet" href="../css/seller/add-car.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>卖家登录</h2>
+        <p id="loginMsg"></p>
+        <form onsubmit="return login()" novalidate>
+            <div class="form-item">
+                <label for="username">请输入用户名</label>
+                <input id="username" type="text" placeholder="请输入用户名">
+            </div>
+            <div class="form-item">
+                <label for="password">密码</label>
+                <input id="password" type="password" placeholder="请输入密码">
+            </div>
+            <button type="submit">登录</button>
+        </form>
+    </div>
+    <script src="../js/seller/login.js"></script>
+</body>
+</html>
