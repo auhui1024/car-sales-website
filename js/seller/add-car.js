@@ -7,7 +7,6 @@ function addCar() {
     const desc = document.getElementById('describe').value.trim();
     const image = document.getElementById('carimage').value.trim();
     const msg = document.getElementById('ad');
-
     msg.textContent = '';
     msg.style.color = '';
 
@@ -32,14 +31,14 @@ function addCar() {
         return false;
     }
     if (image && !/^https?:\/\/(.+)$/.test(image)) {
-        msg.textContent = '请输入正确的图片URL（以 http:// 或 https:// 开头）';
+        msg.textContent = '请输入正确的图片URL（ http:// 或 https:// ）';
         return false;
     }
 
     msg.textContent = '添加车辆成功！';
     msg.style.color = '#16a34a';
 
-    // 1) 如果需要持久化，可以改为调用后端接口，这里示例保存localStorage
+    
     const cars = JSON.parse(localStorage.getItem('carList') || '[]');
     cars.push({ model, price: Number(price), mileage: Number(mileage), year: Number(year), color, desc, image, createdAt: new Date().toISOString() });
     localStorage.setItem('carList', JSON.stringify(cars));
