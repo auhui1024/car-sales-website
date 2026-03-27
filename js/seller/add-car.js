@@ -1,4 +1,4 @@
-function addCar() {
+function addcar() {
     const model = document.getElementById('model').value.trim();
     const price = document.getElementById('price').value.trim();
     const mileage = document.getElementById('mileage').value.trim();

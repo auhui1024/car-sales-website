@@ -1,4 +1,4 @@
-function submitRegister() {
+function Register() {
     const user = document.getElementById('sellerUser').value.trim();
     const email = document.getElementById('sellerEmail').value.trim();
     const phone = document.getElementById('sellerPhone').value.trim();
