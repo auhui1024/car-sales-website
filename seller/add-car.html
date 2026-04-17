@@ -10,7 +10,7 @@
         <h2>新增车辆 <button onclick="location.href='login.html'" style="width:80px;height:50px;margin-left:250px">登陆</button></h2>
          
         <p id="ad"></p>
-        <form onsubmit="return addcar()" novalidate>
+       <form onsubmit="addcar(); return false;">
             <div class="form-item">
                 <label for="model">车型</label>
                 <input id="model" type="text" placeholder="请输入车型" required>

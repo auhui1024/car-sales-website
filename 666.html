@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales System UI Development Requirements - Mind Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            overflow-x: auto;
+        }
+        
+        .mindmap-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-width: 1200px;
+        }
+        
+        .root-node {
+            background: linear-gradient(145deg, #ff6b6b, #ee5a5a);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .branches {
+            display: flex;
+            gap: 60px;
+            margin-top: 80px;
+            margin-left: -200px;
+        }
+        
+        .branch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .branch::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            width: 3px;
+            height: 60px;
+            background: linear-gradient(to bottom, #fff, rgba(255,255,255,0.5));
+            transform: translateX(-50%);
+        }
+        
+        .branch-node {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            border-left: 5px solid;
+            min-width: 140px;
+            text-align: center;
+        }
+        
+        .branch:nth-child(1) .branch-node { border-left-color: #4ecdc4; }
+        .branch:nth-child(2) .branch-node { border-left-color: #45b7d1; }
+        .branch:nth-child(3) .branch-node { border-left-color: #96ceb4; }
+        .branch:nth-child(4) .branch-node { border-left-color: #feca57; }
+        
+        .sub-branches {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        .sub-branches::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            width: 2px;
+            height: 30px;
+            background: rgba(255,255,255,0.6);
+            transform: translateX(-50%);
+        }
+        
+        .leaf-node {
+            background: rgba(255,255,255,0.95);
+            padding: 12px 20px;
+            border-radius: 15px;
+            font-size: 14px;
+            color: #555;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            max-width: 220px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .leaf-node:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .leaf-node.feature {
+            border-left: 4px solid #ff9ff3;
+        }
+        
+        .leaf-node.page {
+            border-left: 4px solid #54a0ff;
+        }
+        
+        .leaf-node.validation {
+            border-left: 4px solid #5f27cd;
+        }
+        
+        .leaf-node.responsive {
+            border-left: 4px solid #00d2d3;
+        }
+        
+        .connector {
+            position: absolute;
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .title {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 32px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 1300px) {
+            .mindmap-container {
+                transform: scale(0.8);
+                transform-origin: top center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">📋 Sales System UI Development Requirements</h1>
+    <p class="subtitle">Meeting Minutes Mind Map | 2026-04-12</p>
+    
+    <div class="mindmap-container">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="root-node">🎯 Sales Related Interfaces</div>
+            
+            <div class="branches">
+                <!-- Page Structure Branch -->
+                <div class="branch">
+                    <div class="branch-node" style="border-color: #4ecdc4;">📄 Page Structure</div>
+                    <div class="sub-branches">
+                        <div class="leaf-node page">Sales Page</div>
+                        <div class="leaf-node page">Login Page</div>
+                        <div class="leaf-node page">Register Page</div>
+                        <div class="leaf-node feature">Inter-page Navigation Links</div>
+                    </div>
+                </div>
+                
+                <!-- Functional Requirements Branch -->
+                <div class="branch">
+                    <div class="branch-node" style="border-color: #45b7d1;">⚙️ Functional Requirements</div>
+                    <div class="sub-branches">
+                        <div class="leaf-node validation">Regex Validation</div>
+                        <div class="leaf-node validation">Form Input Validation</div>
+                        <div class="leaf-node validation">Data Format Checking</div>
+                        <div class="leaf-node validation">Error Message Feedback</div>
+                    </div>
+                </div>
+                
+                <!-- Responsive Adaptation Branch -->
+                <div class="branch">
+                    <div class="branch-node" style="border-color: #96ceb4;">📱 Responsive Adaptation</div>
+                    <div class="sub-branches">
+                        <div class="leaf-node responsive">💻 Desktop</div>
+                        <div class="leaf-node responsive">📱 Mobile</div>
+                        <div class="leaf-node responsive">📱 Tablet</div>
+                        <div class="leaf-node responsive">Adaptive Layout Solution</div>
+                    </div>
+                </div>
+                
+                <!-- Technical Implementation Branch -->
+                <div class="branch">
+                    <div class="branch-node" style="border-color: #feca57;">🛠️ Technical Implementation</div>
+                    <div class="sub-branches">
+                        <div class="leaf-node feature">Frontend Framework Selection</div>
+                        <div class="leaf-node feature">Routing Configuration</div>
+                        <div class="leaf-node feature">State Management Solution</div>
+                        <div class="leaf-node feature">UI Component Library Selection</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
